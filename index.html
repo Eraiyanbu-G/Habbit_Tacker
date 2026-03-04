@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Life Stats Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="top">
+    <h2 id="level">Level 1</h2>
+    <div>
+      <span id="xp">0 XP</span> |
+      🔥 <span id="streak">0</span>
+      <button id="themeToggle">🌙</button>
+
+    </div>
+  </header>
+
+  <section class="card">
+    <h3>Today</h3>
+
+    <form id="dailyForm">
+      <input id="sleepInput" type="number" placeholder="Sleep (hours)" required />
+      <input id="waterInput" type="number" placeholder="Water (glasses)" required />
+      <input id="exerciseInput" type="number" placeholder="Exercise (minutes)" required />
+      <button type="submit">Save Today</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>Weekly Summary</h3>
+    <p>Avg Sleep: <span id="avgSleep">0</span>h</p>
+    <p>Total Water: <span id="totalWater">0</span></p>
+    <p>Total Exercise: <span id="totalExercise">0</span> min</p>
+    <button id="exportBtn">Export CSV</button>
+
+   
+    <canvas id="sleepChart" height="200"></canvas>
+    <canvas id="waterChart" height="200"></canvas>
+    <canvas id="exerciseChart" height="200"></canvas>
+
+  
+  </section>
+
+  <section class="card">
+    <h3>Achievements</h3>
+    <ul id="achievementList">
+      <li>No achievements yet</li>
+    </ul>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js_temp/app.js"></script>
+</body>
+</html>
